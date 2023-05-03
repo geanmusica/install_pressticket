@@ -1,7 +1,7 @@
 ## Versão Ubuntu 20.04 
 ### Passo a passo
 
-##Atualiza o sistema
+### Atualiza o sistema
 sudo apt update && sudo apt upgrade -y
 
 
