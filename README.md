@@ -1,5 +1,12 @@
-## Versão Ubuntu 
+## Versão Ubuntu 20.04 
 ### Passo a passo
+
+##Atualiza o sistema
+sudo apt update && sudo apt upgrade -y
+
+
+
+
 Ao executar o comando abaixo, vai aparecer um menu para instalar ou atualizar.
 Para instalar digite 1 e enter
 Vai solicitar os seguintes dados
@@ -39,8 +46,7 @@ cd && cd ./instalador && sudo ./install_instancia
 - Configura os domínios com certificados de segurança
 - Atualiza press ticket para última versão.
 
-## Versão Debian
-- [Press-Ticket-Installer](https://github.com/robsonwr/Press-Ticket-Installer)
+
 
 ## Instalação manual
 - [Press Ticket](https://github.com/rtenorioh/Press-Ticket)
