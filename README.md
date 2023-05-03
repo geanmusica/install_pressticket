@@ -36,7 +36,8 @@ Usuário: admin@pressticket.com.br
 Senha: admin
 
 ### Segunda ou mais instalações
-sudo chmod -R 777 ./instalador && cd ./instalador
+cd && sudo chmod -R 777 ./instalador && cd ./instalador && sudo ./install_instancia
+
 
 ```
 ## Recursos 
