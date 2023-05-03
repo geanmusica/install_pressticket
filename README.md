@@ -1,13 +1,13 @@
 ## Versão Ubuntu 20.04 
 ### Passo a passo
 
-#### Atualiza o sistema
+#### ATUALIZA O SISTEMA
 sudo apt update && sudo apt upgrade -y
 
-#### Instala o git e o repositório
+#### INSTALAR O GIT E REPOSITÓRIO
 sudo apt install -y git && git clone https://github.com/geanmusica/install_pressticket.git instalador && sudo chmod -R 777 ./instalador && cd ./instalador && sudo ./install_primaria
 
-#### Inseri informações
+#### INSERIR INFORMAÇÕES
 Ao executar o comando, vai aparecer um menu para instalar ou atualizar.
 Para instalar digite 1 e enter
 Vai solicitar os seguintes dados
@@ -23,21 +23,20 @@ Vai solicitar os seguintes dados
 O acesso ao phpmyadmin é feito por IP do servidor, ex. http://111.111.111.111:8000
 10. Porta do MYSQL, geralmente para a primeira instalação 3306, e a seguintes instalações que tiverem, 3307, 3308...
 
-#### Corrige erro de Build frontend
+#### CORRIGE O ERRO DE BUILD DO FRONTEND
 cd /home/deploy/NOMEDAEMPRESA/frontend/src && mv config.json.example config.jason && cd /home/deploy/NOMEDAEMPRESA/frontend/ && npm run build
 
-#### Inicia os serviços no PM2
+#### INICIA OS SERVILOS NO PM2
 cd /home/deploy/NOMEDAEMPRESA/backend && pm2 start dist/server.js --name whaticket-backend && cd /home/deploy/NOMEDAEMPRESA/frontend && pm2 start server.js --name whaticket-frontend && pm2 save
 
-
-Seguindo todos os passos acima e não deixando faltar nenhuma da informações solicitadas, é só aguardar o instalador terminar a instalação.
+#### LOGANDO NO FRONT END
 
 Ao terminar a instalação é só logar com os dados padrão:
 Usuário: admin@pressticket.com.br
 Senha: admin
 
 ### Segunda ou mais instalações
-cd && cd ./instalador && sudo ./install_instancia
+sudo chmod -R 777 ./instalador && cd ./instalador
 
 ```
 ## Recursos 
