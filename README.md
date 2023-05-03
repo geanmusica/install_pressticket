@@ -36,6 +36,9 @@ Ao terminar a instalação é só logar com os dados padrão:
 Usuário: admin@pressticket.com.br
 Senha: admin
 
+### Segunda ou mais instalações
+cd && cd ./instalador && sudo ./install_instancia
+
 ```
 ## Recursos 
 - Multi instalador ilimitado [Press Ticket](https://github.com/rtenorioh/Press-Ticket)
