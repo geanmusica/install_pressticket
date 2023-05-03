@@ -34,6 +34,7 @@ cd /home/deploy/NOMEDAEMPRESA/backend
 pm2 start dist/server.js --name whaticket-backend
 cd /home/deploy/NOMEDAEMPRESA/frontend
 pm2 start server.js --name whaticket-frontend
+pm2 save
 
 
 Seguindo todos os passos acima e não deixando faltar nenhuma da informações solicitadas, é só aguardar o instalador terminar a instalação.
