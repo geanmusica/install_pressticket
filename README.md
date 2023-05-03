@@ -4,10 +4,11 @@
 #### Atualiza o sistema
 sudo apt update && sudo apt upgrade -y
 
+#### Instala o git e o repositório
+sudo apt install -y git && git clone https://github.com/geanmusica/install_pressticket.git instalador && sudo chmod -R 777 ./instalador && cd ./instalador && sudo ./install_primaria
 
-
-
-Ao executar o comando abaixo, vai aparecer um menu para instalar ou atualizar.
+#### Inseri informações
+Ao executar o comando, vai aparecer um menu para instalar ou atualizar.
 Para instalar digite 1 e enter
 Vai solicitar os seguintes dados
 1. Senha mysql
@@ -22,20 +23,25 @@ Vai solicitar os seguintes dados
 O acesso ao phpmyadmin é feito por IP do servidor, ex. http://111.111.111.111:8000
 10. Porta do MYSQL, geralmente para a primeira instalação 3306, e a seguintes instalações que tiverem, 3307, 3308...
 
+#### Corrige erro de Build frontend
+cd /home/deploy/NOMEDAEMPRESA/frontend/src
+mv config.json.example config.jason
+cd /home/deploy/NOMEDAEMPRESA/frontend/
+npm run build
+
+#### Inicia os serviços no PM2
+cd /home/deploy/NOMEDAEMPRESA/backend
+pm2 start dist/server.js --name whaticket-backend
+cd /home/deploy/NOMEDAEMPRESA/frontend
+pm2 start server.js --name whaticket-backend
+
+
 Seguindo todos os passos acima e não deixando faltar nenhuma da informações solicitadas, é só aguardar o instalador terminar a instalação.
 
-Ao terminar a instalação é só logar com os dados padrão, caso não saiba veja na página do projeto [Press Ticket aqui](https://github.com/rtenorioh/Press-Ticket).
+Ao terminar a instalação é só logar com os dados padrão:
+Usuário: admin@pressticket.com.br
+Senha: admin
 
-## INSTALAÇÃO 
-FAZENDO DOWNLOAD DO INSTALADOR & INICIANDO A PRIMEIRA INSTALAÇÃO (USAR SOMENTE PARA PRIMEIRA INSTALAÇÃO):
-
-```bash
-sudo apt install -y git && git clone https://github.com/tonnybarros/install_pressticket-phpmyadmin.git instalador && sudo chmod -R 777 ./instalador && cd ./instalador && sudo ./install_primaria
-```
-
-ACESSANDO DIRETORIO DO INSTALADOR & INICIANDO INSTALAÇÕES ADICIONAIS (USAR ESTE COMANDO PARA SEGUNDA OU MAIS INSTALAÇÃO:
-```bash
-cd && cd ./instalador && sudo ./install_instancia
 ```
 ## Recursos 
 - Multi instalador ilimitado [Press Ticket](https://github.com/rtenorioh/Press-Ticket)
@@ -48,5 +54,3 @@ cd && cd ./instalador && sudo ./install_instancia
 
 
 
-## Instalação manual
-- [Press Ticket](https://github.com/rtenorioh/Press-Ticket)
