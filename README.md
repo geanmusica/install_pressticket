@@ -24,17 +24,10 @@ O acesso ao phpmyadmin é feito por IP do servidor, ex. http://111.111.111.111:8
 10. Porta do MYSQL, geralmente para a primeira instalação 3306, e a seguintes instalações que tiverem, 3307, 3308...
 
 #### Corrige erro de Build frontend
-cd /home/deploy/NOMEDAEMPRESA/frontend/src
-mv config.json.example config.jason
-cd /home/deploy/NOMEDAEMPRESA/frontend/
-npm run build
+cd /home/deploy/NOMEDAEMPRESA/frontend/src && mv config.json.example config.jason && cd /home/deploy/NOMEDAEMPRESA/frontend/ && npm run build
 
 #### Inicia os serviços no PM2
-cd /home/deploy/NOMEDAEMPRESA/backend
-pm2 start dist/server.js --name whaticket-backend
-cd /home/deploy/NOMEDAEMPRESA/frontend
-pm2 start server.js --name whaticket-frontend
-pm2 save
+cd /home/deploy/NOMEDAEMPRESA/backend && pm2 start dist/server.js --name whaticket-backend && cd /home/deploy/NOMEDAEMPRESA/frontend && pm2 start server.js --name whaticket-frontend && pm2 save
 
 
 Seguindo todos os passos acima e não deixando faltar nenhuma da informações solicitadas, é só aguardar o instalador terminar a instalação.
